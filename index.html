@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVerse — Repositório de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">CV</span><div><strong>CineVerse</strong><small>Repositório de Filmes</small></div></div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#listas">Minhas Listas</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <button class="btn primary" id="newListBtn">+ Nova lista</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">SEU ACERVO CINEMATOGRÁFICO</p>
+        <h1>Encontre seu próximo <span>filme favorito.</span></h1>
+        <p class="hero-text">Explore filmes, filtre por diversos critérios, consulte fichas técnicas completas e organize sua coleção pessoal.</p>
+        <a class="btn primary" href="#catalogo">Explorar catálogo</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-poster">🎬</div>
+        <div><span class="tag">DESTAQUE</span><h3>Interestelar</h3><p>2014 • Ficção científica</p><strong>★ 4,8/5</strong></div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section">
+      <div class="section-title"><div><p class="eyebrow">CATÁLOGO</p><h2>Explore os filmes</h2></div><span id="resultCount"></span></div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="🔎  Buscar por título, diretor ou ator...">
+        <select id="genre"><option value="">Todos os gêneros</option></select>
+        <select id="year"><option value="">Todos os anos</option></select>
+        <select id="director"><option value="">Todos os diretores</option></select>
+        <select id="rating"><option value="">Qualquer nota</option><option value="4.5">4,5+</option><option value="4">4,0+</option><option value="3">3,0+</option></select>
+      </div>
+      <div id="movieGrid" class="movie-grid"></div>
+      <div id="empty" class="empty hidden">Nenhum filme encontrado com esses filtros.</div>
+    </section>
+
+    <section id="listas" class="section dark-section">
+      <div class="section-title"><div><p class="eyebrow">GESTÃO PESSOAL</p><h2>Minhas listas</h2></div></div>
+      <div id="listsGrid" class="lists-grid"></div>
+    </section>
+
+    <section id="sobre" class="section features">
+      <div><p class="eyebrow">RECURSOS</p><h2>Uma central para sua coleção</h2></div>
+      <div class="feature-grid">
+        <article><span>🎞️</span><h3>Catálogo interativo</h3><p>Filtros por gênero, ano, diretor, elenco e pontuação da crítica.</p></article>
+        <article><span>📋</span><h3>Ficha técnica</h3><p>Consulte direção, roteiro, orçamento, bilheteria, duração e classificação.</p></article>
+        <article><span>⭐</span><h3>Avaliação pessoal</h3><p>Dê sua nota de 1 a 5 estrelas e acompanhe seus favoritos.</p></article>
+        <article><span>▶️</span><h3>Integração de mídia</h3><p>Acesse trailers, bastidores e trilhas sonoras na ficha de cada filme.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <footer><strong>CineVerse</strong> • Protótipo acadêmico de repositório de filmes</footer>
+  <script src="script.js"></script>
+</body>
+</html>
