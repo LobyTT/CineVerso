@@ -1,5 +1,5 @@
 # CineVerso
-Escopo:
+Escopo:/n
 Organizar objetivos - Responsáveis: Todos
 Desenvolver HTML - Responsáveis: Alex, Estevan
 Desenvolver CSS e design - Responsável: Estevan
